@@ -1,13 +1,17 @@
 import './App.css'
-import Count from './components/Count'
+
+import Count from './components/Count';
+import {useState} from 'react';
 
 function App() {
 
+  const [count, setCount] = useState(0);
+
 return (
     <>
-    <Count />
-    <Count />
-    <Count />
+    <Count count={count} setCount={setCount}/>
+    <Count count={count} setCount={setCount}/>
+    <Count count={count} setCount={setCount}/>
     </>
   )
  }
